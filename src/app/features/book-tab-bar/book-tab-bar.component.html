@@ -1,0 +1,5 @@
+<div class="d-flex">
+    <button class="btn" (click)="toggleCardView.emit(true)"  [ngClass]="{'fw-bold': actualView}">Card View</button>
+    <button class="btn" (click)="toggleCardView.emit(false)" [ngClass]="{'fw-bold': !actualView}">List View</button>
+    <button class="btn">New Book</button>
+</div>
