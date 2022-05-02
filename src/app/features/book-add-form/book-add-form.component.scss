@@ -1,0 +1,9 @@
+.book-modal {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    background-color: beige;
+    z-index: 11;
+  }
