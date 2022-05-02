@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { IBook } from 'src/app/models/book.model';
 
 @Component({
@@ -13,8 +13,12 @@ export class BookAddFormComponent implements OnInit {
   @Output() savedBook = new EventEmitter<IBook>();
   bookForm: FormGroup = new FormGroup({
     title: new FormControl(''),
-    authorName: new FormControl(''),
-    authorSurname: new FormControl(''),
+    author: new FormGroup(
+      {
+        name: new FormControl(''),
+        surname: new FormControl('')
+      }
+    )
   });
   constructor() { }
 

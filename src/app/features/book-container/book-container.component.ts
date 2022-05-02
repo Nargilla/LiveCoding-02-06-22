@@ -23,7 +23,8 @@ export class BookContainerComponent implements OnInit {
 
   saveBook(book: IBook): void {
     book.id = Math.random().toString(36).replace('0.', '').substring(2,9);
-    this.books.push(book);
+    console.log(book);
+    this.books = [...this.books, book];
     this.closeModals();
   }
 
